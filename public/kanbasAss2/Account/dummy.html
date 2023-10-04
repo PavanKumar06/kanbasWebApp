@@ -74,11 +74,7 @@
                         <div class="wd-flex-row-container wd-width-100p">
                             <div class="breadcrumb wd-breadcrumb-symbol wd-width-100p">
                                 <i class="fas fa-hamburger fa-2x"></i><span class="breadcrumb-item wd-padding-left-3p wd-fontcolor-red">CS4550.12631.202410</span>
-                                <span class="breadcrumb-item active">Assignments</span>
-                                <span class="breadcrumb-item active">A1 - ENV + ...</span>
-                            </div>
-                            <div class="wd-width-100p" style="text-align: right;">
-                                <button class="btn btn-secondary"><i class="fas fa-glasses" style="color: #3d3f43;"></i>&nbspStudent View</button>
+                                <span class="breadcrumb-item active">Settings</span>
                             </div>
                         </div>
                         <div style="margin-top: -10px; margin-bottom: 0px;">
@@ -149,45 +145,115 @@
                             </div>
                         </div>
                         <div class="container.fluid wd-display-flex wd-padding-left-5p wd-width-100p">
-                            <div class="wd-width-100p">
-                                <div class="wd-no-wrap">
-                                    <div class="wd-display-flex-align-center">
-                                        <div class="wd-flexgrow-1-display-flex-justifycontent">
-                                            <i class="mt-2 fas fa-check-circle" style="color: #0d8604; padding-right: 10px;"></i>
-                                            <span class="mt-1 me-2" style="color: #0d8604;"><b>Published</b></span>
-                                            <button class="btn btn-secondary wd-margin-left-5px"><i class="wd-button-padding-top-bottom-4px fas fa-ellipsis-v"></i></button>
-                                        </div>
-                                    </div>
-                                    <div class="wd-paddingtop-10px">
-                                        <hr />
-                                    </div>
+                            <div class="wd-flex-col-container">
+                                <div>
+                                    <ul class="nav nav-tabs">
+                                        <li class="nav-item">
+                                          <a class="nav-link active" aria-current="page" href="#">Course Details</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" style="color: crimson;" href="#">Sections</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" style="color: crimson;" href="#">Navigation</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" style="color: crimson;" href="#">Apps</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" style="color: crimson;" href="#">Feature Options</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" style="color: crimson;" href="#">Integrations</a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="wd-flex-col-container">
-                                    <form>
-                                        <div class="container">
-                                            <div class="col">
-                                                <label class="form-label" for="assinput">Assignment Name</label>
-                                                <input type="text" class="form-control mb-3" id="assinput" value="A1 - ENV + HTML" />
-                                                <textarea class="form-control" rows="4">This assignment describes how to install the development environment for creating and working with Web application we will be developing this semester.</textarea>
-                                                <label class="form-label" for="asspoints">Points</label>
-                                                <input type="text" class="form-control mb-3" value="100">
-                                                <label for="assgroup" class="form-label">Assignment Group</label>
-                                                <select class="form-select" id="assgroup">
-                                                    <option value="none">none</option>
-                                                    <option value="assignments" selected>ASSIGNMENTS</option>
-                                                </select>
-                                                <label for="assgrade" class="form-label">Display Grade as</label>
-                                                <select class="form-select" id="assgroup">
-                                                    <option value="none">none</option>
-                                                    <option value="percentage" selected>Percentage</option>
-                                                </select>
-                                                <input class="form-check-input" type="checkbox" id="count">
-                                                <label class="form-check-label" for="count">
-                                                    Do not count this assignment towards the final grade
-                                                </label>
-                                            </div>
+                                <div class="mt-4">
+                                    <h2>Course Details</h2>  
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <span style="display: block;"><b>Name:</b></span>
+                                            <span style="display: block;"><b>Course Code:</b></span>
+                                            <span style="display: block;"><b>Blueprint Course:</b></span>
+                                            <span style="display: block;"><b>Course Template:</b></span>
+                                            <span class="mt-4 mb-3" style="display: block;"><b>Time Zone:</b></span>
+                                            <span style="display: block;"><b>SIS ID:</b></span>
+                                            <span style="display: block;"><b>Subaccount:</b></span>
+                                            <span style="display: block;"><b>Term:</b></span>
+                                            <span class="mt-4 mb-3" style="display: block;"><b>Participation:</b></span>
+                                            <span style="display: block; padding-top: 190px;"><b>Default due time:</b></span>
+                                            <span style="display: block; padding-top: 40px;"><b>Language:</b></span>
+                                            <span style="display: block; padding-top: 30px;"><b>File Storage:</b></span>
+                                            <span style="display: block;"><b>Large Course:</b></span>
+                                            <span style="display: block;"><b>Grading Scheme:</b></span>
+                                            <span style="display: block;"><b>License:</b></span>
+                                            <span style="display: block; padding-top: 20px;"><b>File Copyright:</b></span>
+                                            <span style="display: block; padding-top: 20px;"><b>Visibility:</b></span>
+                                            <span style="display: block; padding-top: 80px;"><b>Format:</b></span>
+                                            <span style="display: block; padding-top: 10px;"><b>Mastery Paths:</b></span>
+                                            <span style="display: block; padding-top: 40px;"><b>Description:</b></span>
                                         </div>
-                                    </form>
+                                        <div class="col-9">
+                                            <span style="display: block;">CS4550 12631 Web Development SEC 01 Fall 2023 [BOS-1-TR]</span>
+                                            <span style="display: block;">CS4550.12631.202410</span>
+                                            <span style="display: block;">No</span>
+                                            <span class="mb-3" style="display: block; opacity: 0.5; pointer-events: none;"><input class="form-check-input" type="checkbox" id="coursetemplate" disabled>&nbspEnable course as a Course Template</span>
+                                            <select class="form-select mb-2" id="pronouns">
+                                                <option value="none">None</option>
+                                                <option value="he-him" selected>He/Him</option>
+                                                <option value="she-her">She/Her</option>
+                                            </select>
+                                            <span style="display: block;">CS4550.12631.202410</span>
+                                            <span style="display: block;"><a class="wd-link-crimson" href="#">CS Undergrad</a></span>
+                                            <span class="mb-3" style="display: block;">202410_1 Fall 2023 Semester Full Term</span>
+                                            <select class="form-select" id="pronouns">
+                                                <option value="none">None</option>
+                                                <option value="he-him" selected>Term</option>
+                                            </select>
+                                            <span style="display: block;">Course particiaption is limited to <b>term</b> start and end dates.</span>
+                                            <span style="display: block;"><b>Start</b></span>
+                                            <input type="date" class="form-control">
+                                            <span style="display: block;"><b>End</b></span>
+                                            <input type="date" class="form-control">
+                                            <span style="display: block;"><input class="form-check-input" type="checkbox" id="restrictstudentsstartdate">&nbspRestrict students from viewing course before term start date</span>
+                                            <span style="display: block;"><input class="form-check-input" type="checkbox" id="restrictstudentsstartdate">&nbspRestrict students from viewing course before term end date</span>
+                                            <select class="form-select" id="pronouns">
+                                                <option value="none">None</option>
+                                                <option value="he-him" selected>Account default (11:59pm)</option>
+                                            </select>
+                                            <span style="display: block;">This influences the user interface for setting due dates.</span>
+                                            <select class="form-select" id="pronouns">
+                                                <option value="none">None</option>
+                                                <option value="he-him" selected>Not set (user-configurable, defaults to English)</option>
+                                            </select>
+                                            <span style="display: block;">This will override an user/system language preferences.</span>
+                                            <span style="display: block;">10000 megabytes</span>
+                                            <span style="display: block;"><input class="form-check-input" type="checkbox" id="restrictstudentsstartdate">&nbspLaunch SpeedGrader Filtered by Student Group</span>
+                                            <span style="display: block;"><input class="form-check-input" type="checkbox" id="restrictstudentsstartdate">&nbspEnable course grading scheme</span>
+                                            <span style="display: flex;"><select class="form-select mb-2" id="pronouns">
+                                                <option value="none">None</option>
+                                                <option value="he-him" selected>Private(Copyrighted)</option>
+                                            </select><i class="far fa-question-circle mt-2 ms-2" style="color: #f42e0b;"></i></span>
+                                            <span style="display: block;"><input class="form-check-input" type="checkbox" id="restrictstudentsstartdate">&nbspCopyright and license information must be provided for files before then are published.</span>
+                                            <span style="display: block;">If you need to make your course public please contact your administrator/support.</span>
+                                            <span style="display: flex;"><select class="form-select mb-2" id="pronouns" disabled>
+                                                <option value="none">None</option>
+                                                <option value="he-him" selected>Course</option>
+                                            </select><i class="far fa-question-circle mt-2 ms-2" style="color: #f42e0b;"></i></span>
+                                            <span style="display: block;"><input class="form-check-input" type="checkbox" id="restrictstudentsstartdate">&nbspInclude this course in the public course index</span>
+                                            <select class="form-select" id="pronouns">
+                                                <option value="none">None</option>
+                                                <option value="he-him" selected>On-Campus</option>
+                                            </select>
+                                            <span style="display: block;"><input class="form-check-input" type="checkbox" id="restrictstudentsstartdate">&nbspEnable individual learning paths for students based on assessment</span>
+                                            <span style="display: block;"><textarea class="form-control" id="exampleTextarea" rows="4"></textarea></span>
+                                            <span style="display: block;"><a class="wd-link-crimson ms-2" href="#">more options</a></span>
+                                        </div>
+                                        <hr class="mt-2" />
+                                        <div class="text-end">
+                                            <button class="btn btn-danger">Update Course Details</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -114,6 +114,9 @@
 .wd-padding-right-2p {
     padding-right: 2%;
 }
+.wd-flex-3 {
+    flex: 3;
+}
 .wd-no-wrap {
     white-space: nowrap;
 }
@@ -139,7 +142,9 @@
 .wd-margin-left-5px {
     margin-left: 5px;
 }
+.wd-flex-1 {
+    flex: 1;
+}
 .wd-button-margin-7px {
     margin-bottom: 7px;
 }
-

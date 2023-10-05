@@ -151,4 +151,13 @@
 .list-group-item:not(.list-group-item-secondary) {
     border-left: 4px solid green;
 }
-
+@media (max-width: 768px) {
+    #normal-icon {
+      display: none;
+    }
+}
+@media (min-width: 769px) {
+    #small-screen-icon {
+        display: none;
+    }
+}

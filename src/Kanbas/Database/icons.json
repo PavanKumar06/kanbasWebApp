@@ -1,0 +1,47 @@
+[
+    {
+        "link": "/account/",
+        "icon": "FaUserNinja",
+        "name": "Account"  
+    },
+    {
+        "link": "/dashboard/",
+        "icon": "FaTachometerAlt",
+        "name": "Dashboard"  
+    },
+    {
+        "link": "/courses/",
+        "icon": "FaBookDead",
+        "name": "Courses"  
+    },
+    {
+        "link": "/calendar/",
+        "icon": "FaCalendarAlt",
+        "name": "Calendar"  
+    },
+    {
+        "link": "/inbox/",
+        "icon": "FaInbox",
+        "name": "Inbox"  
+    },
+    {
+        "link": "/history/",
+        "icon": "FaHistory",
+        "name": "History"  
+    },
+    {
+        "link": "/studio/",
+        "icon": "FaYoutube",
+        "name": "Studio"  
+    },
+    {
+        "link": "/commons/",
+        "icon": "FaArrowCircleRight",
+        "name": "Commons"  
+    },
+    {
+        "link": "/help/",
+        "icon": "FaQuestion",
+        "name": "Help"  
+    }
+]

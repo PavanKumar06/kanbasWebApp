@@ -15,7 +15,7 @@ function DashboardTile({ course, index }) {
                         </i>
                     </div>
                     <div className="card-body">
-                        <h5 className="wd-card-text-margin-bottom-0px">
+                        <h5 className="wd-card-text-margin-bottom-0px" style={{ minHeight: '50px' }}>
                             {course.number} {course.name}
                         </h5>
                         <p className="card-text wd-card-body-font-20px">

@@ -2,12 +2,13 @@ import db from '../Database';
 import './index.css';
 import AssignmentItem from './assignmentItem';
 import { FaCircle, FaPlus, FaSortDown, FaEllipsisV } from 'react-icons/fa';
+import { PiDotsSixVerticalBold } from "react-icons/pi";
 
 function Assignment(props) {
     const courseId = props.courseId;
-    const courseAsignments = db.assignments.filter(c => c.course === courseId);
+    const courseAssignments = db.assignments.filter(c => c.course === courseId);
     return (
-        <div className='wd-width-100p wd-paddingtop-5p'>
+        <div className='wd-width-100p wd-paddingtop-5p' style={{paddingLeft: '5%'}}>
             <div className="wd-no-wrap wd-width-95p">
                 <div className="wd-display-flex-align-center">
                     <div>
@@ -33,7 +34,7 @@ function Assignment(props) {
                 <ul className="list-group wd-ul-style">
                     <li className="list-group-item list-group-item-secondary">
                         <span>
-                            <FaCircle style={{ color: '#161717', paddingRight: '5px' }} />
+                            <PiDotsSixVerticalBold size={24} style={{ color: '#161717', paddingRight: '5px' }} />
                             <FaSortDown style={{ color: '#161718' }} />
                             <span>Assignments</span>
                             <div className="float-end">
@@ -43,7 +44,7 @@ function Assignment(props) {
                         </span>
                     </li>
                     {
-                        courseAsignments.map(ass => {
+                        courseAssignments.map(ass => {
                             return(<AssignmentItem ass={ass} />);
                         })
                     }

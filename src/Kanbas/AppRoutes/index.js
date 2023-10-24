@@ -8,8 +8,8 @@ import Courses from '../Courses';
 function AppRoutes() {
     const { pathname } = useLocation();
 
-    const shouldDashboardHeadingNav = pathname.startsWith('/dashboard/');
-    const shouldCoursesHeadingNav = pathname.startsWith('/courses');
+    const shouldDashboardHeadingNav = pathname.startsWith('/Kanbas/dashboard');
+    const shouldCoursesHeadingNav = pathname.startsWith('/Kanbas/courses/RS');
 
     return (
         <div>
@@ -18,13 +18,11 @@ function AppRoutes() {
                 <div className="container.fluid wd-paddingtop-20px wd-padding-left-3p wd-padding-right-3p wd-width-100p">
                     <div className="wd-flex-col-container wd-width-100p">
                         {shouldDashboardHeadingNav && <HeadingNav />}
+                        {/* {shouldDashboardHeadingNav && <Dashboard />} */}
+                        {/* {shouldCoursesHeadingNav && <Courses /> } */}
                         <Routes>
-                            {shouldDashboardHeadingNav && (
-                                <Route path="/dashboard/" element={<Dashboard />} />
-                            )}
-                            {shouldCoursesHeadingNav && (
-                                <Route path="Courses/:courseId/*" element={<Courses />} />
-                            )}
+                            <Route path="dashboard" element={<Dashboard />} />
+                            <Route path="Courses/:courseId/*" element={<Courses />} />
                         </Routes>
                     </div>
                 </div>

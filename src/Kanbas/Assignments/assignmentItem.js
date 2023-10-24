@@ -13,7 +13,7 @@ const AssignmentItem = ({ass}) => {
                         <FaEdit size={24} style={{ color: '#05ad19', paddingRight: '10px' }} />
                     </div>
                     <div style={{ width: '100%' }}>
-                        <Link to={`/courses/${ass.course}/Assignments/${ass._id}`} className="wd-link-black">
+                        <Link to={`/Kanbas/courses/${ass.course}/Assignments/${ass._id}`} className="wd-link-black">
                             <b>{ass.title}</b>
                         </Link>
                         <br />

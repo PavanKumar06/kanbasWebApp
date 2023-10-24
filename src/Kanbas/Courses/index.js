@@ -10,7 +10,10 @@ import Grades from "./Grades";
 
 function Courses() {
   const { courseId } = useParams();
+  console.log(useParams());
+  console.log("Courses" + courseId);
   const course = db.courses.find((course) => course._id === courseId);
+  console.log("Courses" + course);
   return (
     <div>
       <CourseHeader course={course} />
@@ -25,11 +28,11 @@ function Courses() {
         >
           <Routes>
             <Route path="/" element={<Navigate to="Home" />} />
-            <Route path="Home" element={<Home />} />
-            <Route path="Modules" element={<Modules />} />
-            <Route path="Assignments" element={<Assignment courseId={courseId}/>} />
-            <Route path="Assignments/:assignmentId" element={<EditAssignment />} />
-            <Route path="Grades" element={<Grades />} />
+            <Route path="/Home" element={<Home />} />
+            <Route path="/Modules" element={<Modules />} />
+            <Route path="/Assignments" element={<Assignment courseId={courseId}/>} />
+            <Route path="/Assignments/:assignmentId" element={<EditAssignment />} />
+            <Route path="/Grades" element={<Grades />} />
           </Routes>
         </div>
       </div>

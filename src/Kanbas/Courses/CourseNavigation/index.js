@@ -29,7 +29,7 @@ function CourseNavigation() {
       {links.map((link, index) => (
         <Link
           key={index}
-          to={`/courses/${courseId}/${link}`}
+          to={`/Kanbas/courses/${courseId}/${link}`}
           className={`list-group-item list-group-nav ${pathname.includes(link) && "active"}`}
         >
           {link}

@@ -1,26 +1,26 @@
 [
     {
-        "link": "/account/",
+        "link": "/Kanbas/account/",
         "icon": "FaUserNinja",
         "name": "Account"  
     },
     {
-        "link": "/dashboard/",
+        "link": "/Kanbas/dashboard/",
         "icon": "FaTachometerAlt",
         "name": "Dashboard"  
     },
     {
-        "link": "/courses/",
+        "link": "/Kanbas/courses/",
         "icon": "FaBookDead",
         "name": "Courses"  
     },
     {
-        "link": "/calendar/",
+        "link": "/Kanbas/calendar/",
         "icon": "FaCalendarAlt",
         "name": "Calendar"  
     },
     {
-        "link": "/inbox/",
+        "link": "/Kanbas/inbox/",
         "icon": "FaInbox",
         "name": "Inbox"  
     },

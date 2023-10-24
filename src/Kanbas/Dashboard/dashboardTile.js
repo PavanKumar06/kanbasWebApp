@@ -8,7 +8,7 @@ function DashboardTile({ course, index }) {
     return (
         <div className="wd-card-padding col-12 col-md-6 col-lg-4 col-xl-3">
             <div className="card">
-                <Link to={`/courses/${course._id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Link to={`/Kanbas/courses/${course._id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                     <div className={`card-header ${tileClass} wd-card-header-height-140px`}>
                         <i className="float-end wd-white-icon">
                             <FaEllipsisV size={32} />

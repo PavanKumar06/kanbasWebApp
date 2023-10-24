@@ -7,6 +7,7 @@ const CourseHeader = ({ course }) => {
   const pathParts = pathname.split("/");
   const lastPart = pathParts[pathParts.length - 1];
   const breadcrumbLastPart = lastPart.replace(/([a-z])([A-Z])/g, "$1 $2");
+  console.log("HEADER " + course );
 
   return (
     <div className="wd-kanbas-course-header">
@@ -14,7 +15,7 @@ const CourseHeader = ({ course }) => {
         <ol className="breadcrumb wd-kanbas-breadcrumbs">
           <li className="breadcrumb-item">
             <Link
-              to={`/courses/${course._id}/Home`}
+              to={`/Kanbas/courses/${course._id}/Home`}
               className="wd-kanbas-course-header-link"
             >
               {course._id}

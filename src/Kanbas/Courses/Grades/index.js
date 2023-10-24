@@ -12,12 +12,11 @@ function Grades() {
   const enrolledStudents = database.enrollments.filter(
     (enrollment) => enrollment.course === courseId
   );
-  console.log(database.grades);
 
   return (
     <div className="col col-11 wd-grades" style={{paddingLeft: '5%'}}>
       <div className="mb-4">
-        <div className="d-flex justify-content-end">
+        <div className="d-flex justify-content-end" style={{paddingTop: '2%'}}>
           <div className="m-1">
             <button className="btn btn-secondary">
               <i className="fa-solid fa-file-import"></i> Import

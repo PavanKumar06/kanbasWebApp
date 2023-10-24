@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import KanbasNavigation from '../KanbasNavigation';
 import HeadingNav from '../HeadingNav';
 import './index.css';
@@ -9,7 +9,6 @@ function AppRoutes() {
     const { pathname } = useLocation();
 
     const shouldDashboardHeadingNav = pathname.startsWith('/Kanbas/dashboard');
-    const shouldCoursesHeadingNav = pathname.startsWith('/Kanbas/courses/RS');
 
     return (
         <div>

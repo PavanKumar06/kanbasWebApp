@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { FaCheckCircle, FaEllipsisV } from 'react-icons/fa';
 import db from '../../Database';
 
 function EditAssignment() {

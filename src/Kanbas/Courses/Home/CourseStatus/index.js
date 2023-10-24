@@ -79,23 +79,23 @@ const CourseStatus = () => {
           <b>To Do</b>
           <br />
         </span>
-        <a href="#" className="wd-link-color-crimson">
+        <button className="wd-link-color-crimson">
           Grade A1-HTML
-        </a>
+        </button>
         <hr />
         <span>
           <b>Coming Up</b>
           <br />
         </span>
-        <a href="#" className="wd-link-color-crimson">
+        <button className="wd-link-color-crimson">
           Lecture 1
-        </a>
-        <a href="#" className="wd-link-color-crimson">
+        </button>
+        <button className="wd-link-color-crimson">
           Quiz
-        </a>
-        <a href="#" className="wd-link-color-crimson">
+        </button>
+        <button className="wd-link-color-crimson">
           Grade A1-HTML
-        </a>
+        </button>
         <hr />
       </div>
     </div>

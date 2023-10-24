@@ -1,7 +1,7 @@
 import db from '../Database';
 import './index.css';
 import AssignmentItem from './assignmentItem';
-import { FaCircle, FaPlus, FaSortDown, FaEllipsisV } from 'react-icons/fa';
+import { FaPlus, FaSortDown, FaEllipsisV } from 'react-icons/fa';
 import { PiDotsSixVerticalBold } from "react-icons/pi";
 
 function Assignment(props) {

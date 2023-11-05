@@ -1,22 +1,22 @@
-.module-list {
+.wd-module-list {
   width: 80%;
   margin: auto;
   padding: 20px;
 }
 
-.module-item {
+.wd-module-item {
   margin-bottom: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 15px;
 }
 
-.module-title {
+.wd-module-title {
   color: #333;
   margin-bottom: 10px; /* Adjust spacing */
 }
 
-.module-description {
+.wd-module-description {
   color: #777;
 }
 
@@ -26,6 +26,7 @@
 
 .wd-width-100p {
   width: 100%;
+  margin-top: 20px;
 }
 
 .wd-display-flex-align-center {
@@ -45,4 +46,35 @@
 
 .wd-paddingtop-10px {
   padding-top: 10px;
+}
+
+.wd-deleteBtn {
+  margin-right: 10px;
+  background-color: crimson;
+}
+
+.wd-deleteBtn:hover {
+  background-color: crimson;
+}
+
+.wd-formWrapper {
+  display: flex;
+}
+
+.wd-formLeftWrapper {
+  width: 65%;
+}
+
+.wd-formRightWrapper {
+  width: 35%;
+  margin-left: 10px;
+}
+
+.wd-modName {
+  margin-bottom: 10px;
+}
+
+.wd-addModBtn {
+  margin-right: 10px;
+  background-color: #198754;
 }

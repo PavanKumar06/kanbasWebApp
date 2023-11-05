@@ -2,7 +2,7 @@ import './index.css';
 import { Link } from "react-router-dom";
 import { FaEllipsisV, FaEdit } from 'react-icons/fa'; // Import from 'react-icons/fa'
 
-function DashboardTile({ course, index }) {
+function DashboardTile({ course, index, deleteCourse, setCourse }) {
     const classList = ["bg-secondary", "bg-primary", "bg-success", "bg-warning", "bg-info", "bg-danger"];
     const tileClass = classList[index % classList.length];
     return (
@@ -27,6 +27,24 @@ function DashboardTile({ course, index }) {
                         <i className="far fa-edit">
                             <FaEdit size={32} />
                         </i>
+                        <div>
+                            <button
+                                className="btn btn-secondary wd-deleteBtn"
+                                onClick={(event) => {
+                                event.preventDefault();
+                                deleteCourse(course._id);
+                                }}>
+                                Delete
+                            </button>
+                            <button
+                                className="btn btn-secondary"
+                                onClick={(event) => {
+                                event.preventDefault();
+                                setCourse(course);
+                                }}>
+                                Edit
+                            </button>
+                        </div>
                     </div>
                 </Link>
             </div>

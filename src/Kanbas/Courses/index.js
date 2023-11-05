@@ -8,11 +8,11 @@ import Assignment from "../Assignments";
 import EditAssignment from "../Assignments/EditAssignment";
 import Grades from "./Grades";
 
-function Courses() {
+function Courses({courses}) {
   const { courseId } = useParams();
   console.log(useParams());
   console.log("Courses" + courseId);
-  const course = db.courses.find((course) => course._id === courseId);
+  const course = courses.find((course) => course._id === courseId);
   console.log("Courses" + course);
   return (
     <div>

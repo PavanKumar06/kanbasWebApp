@@ -1,6 +1,6 @@
 import './index.css';
 import { Link } from "react-router-dom";
-import { FaEllipsisV, FaEdit } from 'react-icons/fa'; // Import from 'react-icons/fa'
+import { FaEllipsisV, FaEdit } from 'react-icons/fa';
 
 function DashboardTile({ course, index, deleteCourse, setCourse }) {
     const classList = ["bg-secondary", "bg-primary", "bg-success", "bg-warning", "bg-info", "bg-danger"];

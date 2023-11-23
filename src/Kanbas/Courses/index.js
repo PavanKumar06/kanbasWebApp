@@ -22,9 +22,11 @@ function Courses({courses}) {
     setCourse(response.data);
   };
   
+  /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
     findCourseById(courseId);
   }, [courseId]);
+  /* eslint-enable react-hooks/exhaustive-deps */
 
   return (
     <div>

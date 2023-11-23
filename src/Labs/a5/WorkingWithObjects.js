@@ -27,9 +27,15 @@ function WorkingWithObjects() {
     const response = await axios.get(`${URL}/score/${assignment.score}`);
     setAssignment(response.data);
   };
+  /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
-    fetchAssignment();
+    const fetchAss = async () => {
+      const response = await axios.get(`${URL}`);
+      setAssignment(response.data);
+    };
+    fetchAss();
   }, []);
+  /* eslint-enable react-hooks/exhaustive-deps */
 
   return (
     <div>

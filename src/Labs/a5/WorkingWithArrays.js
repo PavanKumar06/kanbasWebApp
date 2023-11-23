@@ -3,6 +3,7 @@ import axios from "axios";
 
 const WorkingWithArrays = () => {
   const API_BASE = process.env.REACT_APP_BASE_URL;
+  const API = `${API_BASE}/a5/todos`;
   const [errorMessage, setErrorMessage] = useState(null);
   const [todo, setTodo] = useState({
     id: 1,
@@ -11,17 +12,20 @@ const WorkingWithArrays = () => {
     due: "2021-09-09",
     completed: false,
   });
-
+  /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
+    const fetchTodos = async () => {
+      const response = await axios.get(API);
+      setTodos(response.data);
+    };
+
     fetchTodos();
   }, []);
+  /* eslint-enable react-hooks/exhaustive-deps */
 
-  const API = `${API_BASE}/a5/todos`;
+  
   const [todos, setTodos] = useState([]);
-  const fetchTodos = async () => {
-    const response = await axios.get(API);
-    setTodos(response.data);
-  };
+
   const createTodo = async () => {
     const response = await axios.get(`${API}/create`);
     setTodos(response.data);
@@ -42,6 +46,7 @@ const WorkingWithArrays = () => {
     try {
       const response = await axios.delete(`${API}/${todo.id}`);
       setTodos(todos.filter((t) => t.id !== todo.id));
+      console.log(response);
     } catch (error) {
       console.log(error);
       setErrorMessage(`Unable to delete TODO with ID ${todo.id}`);
@@ -52,6 +57,7 @@ const WorkingWithArrays = () => {
     try {
       const response = await axios.put(`${API}/${todo.id}`, todo);
       setTodos(todos.map((t) => (t.id === todo.id ? todo : t)));
+      console.log(response);
     } catch (error) {
       console.log(error);
       setErrorMessage(`Unable to update TODO with ID ${todo.id}`);

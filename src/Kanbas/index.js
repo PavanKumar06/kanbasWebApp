@@ -24,11 +24,6 @@ function Kanbas() {
     setCourses([response.data, ...courses]);
   };
 
-  const findAllCourses = async () => {
-    const response = await axios.get(URL);
-    setCourses(response.data);
-  };
-
   const deleteCourse = async (course) => {
     await axios.delete(`${URL}/${course._id}`);
     setCourses(courses.filter((c) => c._id !== course._id));
@@ -48,10 +43,16 @@ function Kanbas() {
     setCourse(course)
   };
 
+  /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
+    const findAllCourses = async () => {
+      const response = await axios.get(URL);
+      setCourses(response.data);
+    };
+
     findAllCourses();
   }, []);
-
+  /* eslint-enable react-hooks/exhaustive-deps */
   return (
     <Provider store={store}>
       <div className="d-flex">

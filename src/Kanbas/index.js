@@ -2,55 +2,36 @@ import KanbasNavigation from "./KanbasNavigation";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
+import db from "./Database";
 import store from "./store";
 import { Provider } from "react-redux";
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useState } from "react";
 
 function Kanbas() {
-  const URL = `${process.env.REACT_APP_BASE_URL}/api/courses`;
+  const [courses, setCourses] = useState(db.courses);
   const [course, setCourse] = useState({
-    name: "New Course",
-    number: "New Number",
-    startDate: "2023-09-10",
-    endDate: "2023-12-15",
-    department: "new Department",
-    credits: 3
+    name: "New Course Name",
+    number: "New Course Number",
+    startDate: "2023-10-10",
+    endDate: "2023-12-12",
   });
-  const [courses, setCourses] = useState([]);
-
-  const addNewCourse = async () => {
-    const response = await axios.post(URL, course);
-    setCourses([response.data, ...courses]);
+  const addNewCourse = () => {
+    setCourses([...courses, { ...course, _id: new Date().getTime().toString() }]);
   };
-
-  const findAllCourses = async () => {
-    const response = await axios.get(URL);
-    setCourses(response.data);
+  const deleteCourse = (courseId) => {
+    setCourses(courses.filter((course) => course._id !== courseId));
   };
-
-  const deleteCourse = async (course) => {
-    await axios.delete(`${URL}/${course._id}`);
-    setCourses(courses.filter((c) => c._id !== course._id));
-  };
-
-  const updateCourse = async () => {
-    const response = await axios.put(`${URL}/${course._id}`, course);
+  const updateCourse = () => {
     setCourses(
       courses.map((c) => {
         if (c._id === course._id) {
-          return response.data;
+          return course;
         } else {
           return c;
         }
       })
     );
-    setCourse(course)
   };
-
-  useEffect(() => {
-    findAllCourses();
-  }, []);
 
   return (
     <Provider store={store}>

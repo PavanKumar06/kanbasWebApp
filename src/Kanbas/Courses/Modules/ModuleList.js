@@ -6,16 +6,9 @@ import {
   deleteModule,
   updateModule,
   setModule as setModuleAction,
-  setModules
 } from "./modulesReducer";
 import "./index.css";
 import { IoMdMore } from "react-icons/io";
-import {
-  findModulesForCourse,
-  createModule,
-  findModuleToDelete,
-  findModuleToUpdate,
-} from "./client";
 
 function ModuleList() {
   const { courseId } = useParams();
@@ -25,25 +18,16 @@ function ModuleList() {
   useEffect(() => {}, [courseId, dispatch]);
 
   const handleAddModule = () => {
-    createModule(courseId, module).then((module) => {
-      dispatch(addModule(module));
-    });
+    dispatch(addModule({ ...module, course: courseId }));
   };
 
   const handleDeleteModule = (moduleId) => {
-    findModuleToDelete(moduleId).then((_) => {
-      dispatch(deleteModule(moduleId));
-    });
+    dispatch(deleteModule(moduleId));
   };
 
-  const handleUpdateModule = async () => {
-    await findModuleToUpdate(module);
+  const handleUpdateModule = () => {
     dispatch(updateModule(module));
   };
-
-  useEffect(() => {
-    findModulesForCourse(courseId).then((modules) => dispatch(setModules(modules)));
-  }, [courseId, dispatch]);
 
   return (
     <>
